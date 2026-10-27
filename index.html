@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Теория эволюции</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ea;--paper:#fbf8f2;--ink:#26221e;--muted:#7a7068;--acc:#c45c34;--line:#d9d0c3;--soft:#ece5d9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"PT Serif",Georgia,serif;font-size:18px;line-height:1.55}
+.slide{max-width:1100px;margin:0 auto;padding:72px 24px;border-bottom:1px solid var(--line)}
+.kicker{font-family:Montserrat,sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+h1,h2,h3{font-family:Montserrat,sans-serif;line-height:1.15;margin:0 0 16px}
+h1{font-size:56px;font-weight:700}
+h2{font-size:34px;font-weight:700}
+h3{font-size:20px;font-weight:600}
+p{margin:0 0 14px;max-width:760px}
+.lead{font-size:21px;color:#3b352f}
+.shot{background:var(--soft);border:2px dashed var(--line);border-radius:14px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:Montserrat,sans-serif;font-size:15px;margin:22px 0;text-align:center;padding:20px}
+.shot img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.shot:has(img){padding:0;border:0;background:none;aspect-ratio:auto}
+.btn{display:inline-block;font-family:Montserrat,sans-serif;font-weight:600;background:var(--acc);color:#fff;padding:14px 28px;border-radius:999px;text-decoration:none;margin-top:8px}
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:12px;margin:24px 0;overflow-x:auto}
+.fig svg{display:block;width:100%;min-width:820px;height:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card .n{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:700;font-size:14px;margin-right:8px;vertical-align:middle}
+.card .n.m{background:#fff;color:var(--ink);border:2px dashed var(--ink)}
+.card h3{display:inline;vertical-align:middle;font-size:18px}
+.card p{font-size:16px;margin:10px 0 6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;padding:4px 9px;border-radius:999px;background:var(--soft);color:#4b443d}
+.tag.only{background:#f3ddd2;color:#9a3f1d}
+.legend{font-family:Montserrat,sans-serif;font-size:14px;color:var(--muted);display:flex;gap:22px;flex-wrap:wrap;margin-top:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:24px 0}
+.fish{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px}
+.fish img{width:100%;display:block}
+.fish .cap{font-family:Montserrat,sans-serif;font-size:15px;margin-top:8px}
+.fish .cap b{display:block;font-size:18px}
+.plus{font-family:Montserrat,sans-serif;font-size:15px;color:var(--muted);text-align:center;margin:-6px 0 0}
+table{border-collapse:collapse;width:100%;font-size:16px;margin:16px 0;background:var(--paper)}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{font-family:Montserrat,sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+video{width:100%;border-radius:14px;border:1px solid var(--line);display:block;margin:22px 0;background:#fff}
+.gl{columns:3;column-gap:28px;font-size:16px}
+.gl h3{break-after:avoid;font-size:16px;margin:0 0 6px}
+.gl ul{margin:0 0 18px;padding-left:18px}
+.pass{background:#fffdf8;border:2px solid #2f2924;border-radius:18px;padding:0;margin:24px 0;box-shadow:0 10px 30px rgba(60,40,20,.12);overflow:hidden}
+.pass .hd{display:flex;justify-content:space-between;align-items:center;background:#2f2924;color:#f6efe2;padding:12px 22px;font-family:Montserrat,sans-serif;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.pass .bd{display:grid;grid-template-columns:1.25fr 1fr;gap:0}
+.pass .ph{background:linear-gradient(180deg,#eef4f7,#dfe9ef);display:flex;align-items:center;justify-content:center;padding:18px;border-right:1px solid var(--line)}
+.pass .ph img{width:100%}
+.pass .dt{padding:22px 24px}
+.pass .nm{font-family:Montserrat,sans-serif;font-weight:700;font-size:34px;line-height:1.1;margin:0}
+.pass .sp{font-family:Montserrat,sans-serif;color:var(--muted);font-size:14px;margin:6px 0 14px}
+.pass .kv{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:15px;margin-bottom:12px}
+.pass .kv b{display:block;font-family:Montserrat,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.pass .gn{font-size:14px;border-top:1px solid var(--line);padding-top:10px}
+.pass .gr{display:grid;grid-template-columns:150px 1fr 26px;align-items:center;gap:8px;margin:3px 0}
+.pass .bar{height:8px;border-radius:6px;background:#e8e0d3;position:relative}
+.pass .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--acc)}
+.pass .ft{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;border-top:2px solid #2f2924;padding:16px 22px;background:#fbf6ec}
+.pass .rar{font-family:Montserrat,sans-serif;text-align:center;border:2px solid var(--acc);color:var(--acc);border-radius:12px;padding:8px 14px}
+.pass .rar small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.pass .rar span{font-weight:700;font-size:22px;white-space:nowrap}
+.pass .fact{font-size:15px;margin:0;max-width:none}
+@media (max-width:760px){.pass .bd{grid-template-columns:1fr}.pass .ph{border-right:0;border-bottom:1px solid var(--line)}.pass .ft{grid-template-columns:1fr}}
+.cover h1{font-size:64px}
+.note{font-family:Montserrat,sans-serif;font-size:14px;color:var(--muted);text-align:center;max-width:none;margin:6px auto 0}
+.callout{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:12px;padding:20px 24px;font-size:20px;line-height:1.55;margin:10px 0 18px}
+@media (max-width:760px){h1{font-size:38px}h2{font-size:27px}.two{grid-template-columns:1fr}.gl{columns:1}.slide{padding:48px 16px}}
+</style>
+</head>
+<body>
+
+<!-- 1. Обложка -->
+<section class="slide cover">
+  <p class="kicker" style="text-align:center;max-width:none">Homespace</p>
+  <h1 style="text-align:center">Теория эволюции</h1>
+  <p class="note">Документ схематически описывает процесс эволюции. Документ рабочий, требует доработки.</p>
+  <h3 style="margin-top:28px">Суть</h3>
+  <div class="callout">Суть рыбалки в Homespace не столько в самой рыбалке, сколько в том, что идёт после неё. Это эволюция и возможность вывести редкие виды. При скрещивании двух рыб каждый малёк получает шанс взять гены родителей и что-то приобрести себе. Так игрок выводит рыбу, которой больше нет ни у кого, кроме него.</div>
+  <div class="shot"><img src="img/r0_k_ozeru.jpg" alt="Подошли к озеру"></div>
+</section>
+
+<!-- 2. Зонирование -->
+<section class="slide">
+  <p class="kicker">Озеро</p>
+  <h2>Зонирование</h2>
+  <p>В каждом водоёме Homespace свои зоны для рыбы. Зона задаёт, с какой вероятностью какая рыба попадётся, и в одной зоне ловятся разные виды.</p>
+  <p>Например, в зоне Кометы шанс поймать Комету 70%, рыбу из ближайшей соседней зоны 25%, а из зоны через одну 5%.</p>
+  <div class="shot"><img src="img/zony_ozera.jpg" alt="Карта зон озера с рыбами"></div>
+  <p>Карт сейчас три, и на каждой водятся все 18 видов, каждый в своей зоне.</p>
+  <h3>Какая рыба попадается</h3>
+  <p>Даже внутри одного вида рыбы разные. С первого улова видно, что окрас может меняться.</p>
+  <table>
+    <tr><th>Улов</th><th>Доля</th><th>Какая рыба</th></tr>
+    <tr><td>Обычная</td><td>около 70%</td><td>однотонная, один из природных цветов вида</td></tr>
+    <tr><td>Двухцветная</td><td>около 20%</td><td>голова и хвост разных цветов, тёмная спина и светлое брюхо</td></tr>
+    <tr><td>Узорная</td><td>около 9%</td><td>точки или полосы</td></tr>
+    <tr><td>Редкая</td><td>около 1%</td><td>мрамор или другой необычный узор</td></tr>
+  </table>
+  <p>Приманок и прикормки нет. Homespace строительная игра, без крафта и гринда, поэтому рыбалка простая. Выбрал место и закинул.</p>
+</section>
+
+<!-- 3. Шаг 1. Заброс -->
+<section class="slide" id="cast1">
+  <p class="kicker">Шаг 1</p>
+  <h2>Заброс</h2>
+  <div class="shot"><img src="img/r1_zabros.jpg" alt="Заброс удочки, поплавок на воде"></div>
+  <h2>Ух ты, нам повезло!</h2>
+  <p>Мы поймали красивенькую Комету. Такую и в жизни хочется. Её надо снять с крючка, взять в руку и положить в ведро с заранее набранной водой, а потом отнести домой в аквариум.</p>
+  <div class="shot"><img src="img/r2_krasnaya_na_udochke.jpg" alt="Красная Комета на крючке"></div>
+  <h3>Как вываживать</h3>
+  <p>Когда рыба тянет, ты отпускаешь леску, а когда ослабла, тянешь. Сорваться она может, только если сильно ошибиться, и это видно заранее, потому что удочка сильно гнётся и леска звенит. Сила борьбы зависит от темперамента рыбы. Одна бьётся всерьёз, другая сдаётся почти сразу.</p>
+  <p>В ведро помещается до 5 рыб. Ненужную рыбу можно отпустить, и она уплывает и растворяется. Рыбу в Homespace не едят.</p>
+</section>
+
+<!-- 4. Шаг 2. Аквариум -->
+<section class="slide">
+  <p class="kicker">Шаг 2</p>
+  <h2>Аквариум</h2>
+  <div class="shot"><img src="img/r4_akvarium_odna.jpg" alt="Красная Комета в аквариуме"></div>
+  <p>Смотрите, как красиво! Будет служить нам верой и правдой.</p>
+  <p>Рыб можно держать в большом аквариуме, можно сделать маленький, а можно поселить в уютном декоративном прудике за домом.</p>
+  <p>В одном аквариуме помещается до 12 рыб. Копать в игре нельзя, поэтому пруд делается приподнятым. Бортик стоит на земле, а вода выше её уровня, как в японских прудах с карпами кои.</p>
+  <p>Рыба не стареет и не умирает. Вернулся в свой Homespace, и все на месте.</p>
+</section>
+
+<!-- 5. Шаг 3. Снова на озеро -->
+<section class="slide">
+  <p class="kicker">Шаг 3</p>
+  <h2>Снова на озеро</h2>
+  <p>Чтобы получить потомство, нужна вторая рыба того же вида. Да и бедной Комете одиноко будет в аквариуме одной. Идём за второй рыбой.</p>
+  <p>Только теперь хочется порыбачить в другом месте.</p>
+  <div class="shot"><img src="img/r35_k_ozeru_snova.jpg" alt="Возвращаемся к озеру"></div>
+  <h3>О, ого, а рыба-то другая</h3>
+  <p>Это не Комета. Ну ладно, попробуем ещё раз.</p>
+  <div class="shot"><img src="img/r36_lastochka_na_udochke.jpg" alt="Ласточка на крючке"></div>
+  <h3>Да что ж такое-то</h3>
+  <p>Опять та же рыба, только другого цвета. Ладно, ещё одна попытка.</p>
+  <div class="shot"><img src="img/r37b_lastochka_biryuza.jpg" alt="Ласточка с бирюзовыми пятнами"></div>
+  <h3>О, интересная подсказка</h3>
+  <p>Похоже, в озере есть какое-то зонирование. Так игрок опытным путём понимает, что в разных местах водится разная рыба.</p>
+  <div class="shot"><img src="img/r38_lastochka_podskazka.jpg" alt="Ласточка и подсказка игры"></div>
+  <h3>Вернулись на прошлую позицию</h3>
+  <p>Пришла пора забросить удочку.</p>
+  <div class="shot"><img src="img/r1_zabros.jpg" alt="Заброс на прежнем месте"></div>
+  <h2>Ух ты, вот и вторая!</h2>
+  <p>Да, это хорошо. Теперь мы поняли, как работает зонирование озера в игре. Время отнести её домой.</p>
+  <div class="shot"><img src="img/r3_serebryanaya_na_udochke.jpg" alt="Серебряная Комета на крючке"></div>
+</section>
+
+<!-- 6. Две рыбы -->
+<section class="slide">
+  <p class="kicker">Шаг 4</p>
+  <h2>Две Кометы в аквариуме</h2>
+  <p>Несём серебряную домой и выпускаем к красной. Теперь у нас пара, и можно начинать скрещивание.</p>
+  <div class="shot"><img src="img/r5_akvarium_dve.jpg" alt="Две Кометы в аквариуме"></div>
+</section>
+
+<!-- 5. Переход -->
+<section class="slide">
+  <p class="kicker">Дальше самое интересное</p>
+  <h2>Вы выловили рыбку. Теперь начинается эволюция</h2>
+  <p class="lead">Рыбалка в Homespace нужна ради селекции. Каждая рыба несёт в себе геном, и от двух родителей рождается малёк, который берёт от обоих и иногда получает что-то совсем новое.</p>
+</section>
+
+<!-- 6, 7. Комета и анатомия -->
+<section class="slide">
+  <p class="kicker">Анатомия</p>
+  <h2>Из чего состоит Комета</h2>
+  <p>У каждой рыбы около 40 генов. Каждый ген работает как ползунок. Хвост чуть длиннее или короче, шапка от гладкого лба до пышной. Заранее нарисованных вариантов нет, игра собирает рыбу из генов на лету, поэтому почти каждая рыба уникальна.</p>
+  <div class="fig">
+    <svg viewBox="0 0 1900 1050" role="img" aria-label="Комета со стрелками к частям тела">
+      <style>
+        .ln{stroke:#26221e;stroke-width:2.2;fill:none}
+        .ln.m{stroke-dasharray:8 7}
+        .dot{fill:#26221e}
+        .cn{fill:#26221e}
+        .cn.m{fill:#fbf8f2;stroke:#26221e;stroke-width:2.5;stroke-dasharray:5 4}
+        .ct{fill:#fff;font:700 22px Montserrat,sans-serif;text-anchor:middle;dominant-baseline:central}
+        .ct.m{fill:#26221e}
+        .lb{fill:#26221e;font:600 24px Montserrat,sans-serif}
+      </style>
+      <image href="img/kometa_ishodnaya.png" x="200" y="220" width="1400" height="604"/>
+      <g><line x1="150" y1="178" x2="260" y2="408" class="ln"/><circle cx="260" cy="408" r="6" class="dot"/><circle cx="150" cy="150" r="22" class="cn"/><text x="150" y="150" class="ct">2</text><text x="182" y="158" class="lb">Нити на кончиках</text><line x1="560" y1="178" x2="650" y2="520" class="ln"/><circle cx="650" cy="520" r="6" class="dot"/><circle cx="560" cy="150" r="22" class="cn"/><text x="560" y="150" class="ct">1</text><text x="592" y="158" class="lb">Хвост</text><line x1="850" y1="178" x2="1180" y2="540" class="ln"/><circle cx="1180" cy="540" r="6" class="dot"/><circle cx="850" cy="150" r="22" class="cn"/><text x="850" y="150" class="ct">14</text><text x="882" y="158" class="lb">Чешуя</text><line x1="1110" y1="178" x2="1165" y2="290" class="ln"/><circle cx="1165" cy="290" r="6" class="dot"/><circle cx="1110" cy="150" r="22" class="cn"/><text x="1110" y="150" class="ct">5</text><text x="1142" y="158" class="lb">Спинной</text><line x1="1450" y1="178" x2="1445" y2="495" class="ln"/><circle cx="1445" cy="495" r="6" class="dot"/><circle cx="1450" cy="150" r="22" class="cn"/><text x="1450" y="150" class="ct">11</text><text x="1482" y="158" class="lb">Шапка</text><line x1="1638" y1="470" x2="1505" y2="572" class="ln"/><circle cx="1505" cy="572" r="6" class="dot"/><circle cx="1658" cy="470" r="22" class="cn"/><text x="1658" y="470" class="ct">12</text><text x="1690" y="478" class="lb">Глаза</text><line x1="1638" y1="560" x2="1572" y2="585" class="ln"/><circle cx="1572" cy="585" r="6" class="dot"/><circle cx="1658" cy="560" r="22" class="cn"/><text x="1658" y="560" class="ct">13</text><text x="1690" y="568" class="lb">Морда</text><line x1="1638" y1="650" x2="1395" y2="600" class="ln"/><circle cx="1395" cy="600" r="6" class="dot"/><circle cx="1658" cy="650" r="22" class="cn"/><text x="1658" y="650" class="ct">10</text><text x="1690" y="658" class="lb">Жабры</text><line x1="170" y1="902" x2="400" y2="740" class="ln"/><circle cx="400" cy="740" r="6" class="dot"/><circle cx="170" cy="930" r="22" class="cn"/><text x="170" y="930" class="ct">3</text><text x="202" y="938" class="lb">Край плавников</text><line x1="470" y1="967" x2="890" y2="545" class="ln"/><circle cx="890" cy="545" r="6" class="dot"/><circle cx="470" cy="995" r="22" class="cn"/><text x="470" y="995" class="ct">4</text><text x="502" y="1003" class="lb">Хвостовой стебель</text><line x1="780" y1="902" x2="950" y2="650" class="ln"/><circle cx="950" cy="650" r="6" class="dot"/><circle cx="780" cy="930" r="22" class="cn"/><text x="780" y="930" class="ct">7</text><text x="812" y="938" class="lb">Анальный</text><line x1="1000" y1="967" x2="1080" y2="560" class="ln"/><circle cx="1080" cy="560" r="6" class="dot"/><circle cx="1000" cy="995" r="22" class="cn"/><text x="1000" y="995" class="ct">6</text><text x="1032" y="1003" class="lb">Тело</text><line x1="1210" y1="902" x2="1130" y2="740" class="ln"/><circle cx="1130" cy="740" r="6" class="dot"/><circle cx="1210" cy="930" r="22" class="cn"/><text x="1210" y="930" class="ct">8</text><text x="1242" y="938" class="lb">Брюшные</text><line x1="1440" y1="967" x2="1320" y2="690" class="ln"/><circle cx="1320" cy="690" r="6" class="dot"/><circle cx="1440" cy="995" r="22" class="cn"/><text x="1440" y="995" class="ct">9</text><text x="1472" y="1003" class="lb">Грудные</text></g>
+    </svg>
+  </div>
+    <div class="cards"><div class="card"><span class="n">1</span><h3>Хвост</h3><p>Длина, ширина веера, глубина выреза и форма (обычный, двойной или вуаль). Самый заметный признак Кометы.</p><div class="tags"><span class="tag">Кости + запасные хвосты</span><span class="tag only">Вуаль и двойной хвост только селекцией</span></div></div><div class="card"><span class="n">2</span><h3>Нити на кончиках</h3><p>Длинные тонкие продолжения лучей хвоста и плавников.</p><div class="tags"><span class="tag">Морф</span><span class="tag only">Длинные нити только селекцией</span></div></div><div class="card"><span class="n">3</span><h3>Край плавников</h3><p>Ровный, волнистый или бахрома, как кружево. Плюс прозрачность от плотных до стеклянных.</p><div class="tags"><span class="tag">Морф + материал</span><span class="tag">в озере и дома</span></div></div><div class="card"><span class="n">4</span><h3>Хвостовой стебель</h3><p>Толщина перехода от тела к хвосту.</p><div class="tags"><span class="tag">Кости</span><span class="tag">в озере и дома</span></div></div><div class="card"><span class="n">5</span><h3>Спинной плавник</h3><p>Высота и длина вдоль спины, вплоть до нуля, как у породы «львиная голова».</p><div class="tags"><span class="tag">Кости</span><span class="tag only">Без спинного только селекцией</span></div></div><div class="card"><span class="n">6</span><h3>Тело</h3><p>Рост, полнота, вытянутость, горб за головой, брюшко.</p><div class="tags"><span class="tag">Кости + морфы</span><span class="tag only">Горб только селекцией</span></div></div><div class="card"><span class="n">7</span><h3>Анальный плавник</h3><p>Длина нижнего плавника у хвоста.</p><div class="tags"><span class="tag">Кости</span><span class="tag">в озере и дома</span></div></div><div class="card"><span class="n">8</span><h3>Брюшные плавники</h3><p>Размер пары маленьких плавников под брюхом, симметрично.</p><div class="tags"><span class="tag">Кости</span><span class="tag">в озере и дома</span></div></div><div class="card"><span class="n">9</span><h3>Грудные плавники</h3><p>Размер пары у головы. Селекцией можно дойти до плавников больше головы.</p><div class="tags"><span class="tag">Кости</span><span class="tag only">Крайние размеры только селекцией</span></div></div><div class="card"><span class="n">10</span><h3>Жаберные крышки</h3><p>Насколько выпуклые крышки жабр.</p><div class="tags"><span class="tag">Морф</span><span class="tag">в озере и дома</span></div></div><div class="card"><span class="n">11</span><h3>Шапка на лбу</h3><p>Нарост на голове, как у породы «оранда». Начинается с бугорка и растёт за 5 или 6 поколений.</p><div class="tags"><span class="tag">Морф</span><span class="tag only">Только селекцией</span></div></div><div class="card"><span class="n">12</span><h3>Глаза</h3><p>Размер, глаза-телескопы, глаза вверх, пузыри под глазами.</p><div class="tags"><span class="tag">Морфы</span><span class="tag only">Телескопы, глаза вверх и пузыри только селекцией</span></div></div><div class="card"><span class="n">13</span><h3>Морда</h3><p>Профиль от тупой до острой, губы, помпоны у ноздрей.</p><div class="tags"><span class="tag">Морфы</span><span class="tag only">Помпоны только селекцией</span></div></div><div class="card"><span class="n">14</span><h3>Чешуя</h3><p>Блеск от матовой до металлика, жемчужная чешуя, размер чешуек.</p><div class="tags"><span class="tag">Материал</span><span class="tag only">Жемчужная только селекцией</span></div></div></div>
+
+  <h3 style="margin-top:34px">Гены, которые стрелкой не покажешь</h3>
+  <div class="gl">
+    <div><h3>Окрас, 7 генов</h3><ul><li>основной цвет</li><li>насыщенность</li><li>второй цвет</li><li>цвет плавников</li><li>переход от спины к брюху</li><li>блеск чешуи</li><li>свечение</li></ul></div>
+    <div><h3>Узор, 5 генов</h3><ul><li>тип (сплошной, по частям, точки, полосы, мрамор)</li><li>размер пятен или ширина полос</li><li>густота</li><li>контраст</li><li>отдельный узор на плавниках</li></ul></div>
+    <div><h3>Характер, 2 гена</h3><ul><li>темперамент (как бьётся на крючке и как бойко плавает)</li><li>любопытство (подплывает к стеклу и плывёт за рукой или прячется)</li></ul></div>
+  </div>
+  <p style="font-size:16px;color:var(--muted)">Цвета, которых нет в природе (голубой, фиолетовый, золото, свечение), появляются только селекцией.</p>
+</section>
+
+<!-- 7б. Генератор Кометы -->
+<section class="slide">
+  <p class="kicker">Генератор</p>
+  <h2>Каждый ген это ползунок</h2>
+  <p>Каждая деталь Кометы меняется плавно, от минимума до максимума. Размер плавников задают кости. Горб, жабры, глаза и шапку задают морфы, это крайние формы, заранее вылепленные в Blender, и ген смешивает их с обычной формой. Окрас и узор рисует материал. Поэтому одинаковых рыб почти не бывает.</p>
+  <p>Чтобы это было видно, мы собрали генератор Кометы. Это та же модель, что в игре, и рядом ползунки генов. Двигаешь ползунок, и рыба меняется на глазах. Кнопка «Случайный малёк» каждый раз собирает новую рыбу.</p>
+  <iframe src="generator/index.html" title="Генератор Кометы" loading="lazy" style="width:100%;height:620px;border:0;border-radius:14px;margin:22px 0;background:#14110d"></iframe>
+  <p style="font-size:16px;color:var(--muted)">Если генератор выше не загрузился (на телефоне или в мессенджере), ниже снимки из него.</p>
+  <div class="two">
+    <div class="shot"><img src="img/gen_1_ishodnaya.jpg" alt="Исходная красная Комета"></div>
+    <div class="shot"><img src="img/gen_2_lazur.jpg" alt="Лазурь: длинные плавники, горб, шапка, лабиринт"></div>
+    <div class="shot"><img src="img/gen_3_malek.jpg" alt="Случайный малёк"></div>
+    <div class="shot"><img src="img/gen_4_malek.jpg" alt="Ещё один случайный малёк"></div>
+  </div>
+  <p style="font-size:16px;color:var(--muted)">Слева сверху исходная Комета, справа «Лазурь», внизу два случайных малька. Генератор открывается отдельной страницей, его можно <a href="generator/index.html">покрутить самому</a>. Версия грубая, модель ещё не облегчена, и морфов пока четыре.</p>
+  <p>В игре малёк берёт гены от мамы и папы, а случай только немного сдвигает их, изредка сильно.</p>
+</section>
+
+<!-- 8. Скрещивание и рост малька -->
+<section class="slide">
+  <p class="kicker">Скрещивание</p>
+  <h2>Мама и папа</h2>
+  <p>Скрещиваются рыбы одного вида. Пару сажаешь в маленький аквариум для разведения. Пока ты этого не сделал, рыбы просто живут и не размножаются. Эволюцию запускает только игрок.</p>
+  <div class="two">
+    <div class="fish"><img src="img/kometa_ishodnaya.png" alt="Красная Комета"><div class="cap"><b>Мама: красная Комета</b>Белая с красными пятнами на спине, голове и хвосте.</div></div>
+    <div class="fish"><img src="img/kometa_belaya.png" alt="Серебряная Комета"><div class="cap"><b>Папа: серебряная Комета</b>Полностью белая, без узора. В паспорте скрытый признак «?».</div></div>
+  </div>
+  <h3>Что малёк берёт от мамы и от папы</h3>
+  <p>От пары рождается один или два малька. Каждый из 40 генов малёк получает от обоих родителей. Значение ложится между мамой и папой, случайно ближе к одной или к другому. Например, у мамы хвост 9 из 10, у папы 6, тогда у малька будет от 6 до 9, чаще всего около 7 или 8. Поверх этого иногда срабатывают мутации.</p>
+  <table>
+    <tr><th>Что происходит</th><th>Шанс на малька</th><th>Как выглядит</th></tr>
+    <tr><td>Обычное наследование</td><td>всегда</td><td>каждый ген между мамой и папой, разброс около 5%</td></tr>
+    <tr><td>Закрепление</td><td>30%</td><td>если черта сильна у обоих родителей, у малька она ещё сильнее</td></tr>
+    <tr><td>Заметный сдвиг</td><td>25%</td><td>один ген меняется на 15%, например хвост длиннее или цвет темнее</td></tr>
+    <tr><td>Скачок</td><td>3%</td><td>новый цвет или узор, которого не было ни у мамы, ни у папы</td></tr>
+    <tr><td>Сверхредкое</td><td>0,5%</td><td>признак, которого нет в природе</td></tr>
+    <tr><td>Скрытый признак</td><td>1 из 4, если он есть у обоих</td><td>спрятанный признак проявляется у потомства</td></tr>
+    <tr><td>Гарантия</td><td>после 50 мальков без скачка</td><td>следующий скачок гарантирован, чтобы не было полосы невезения</td></tr>
+  </table>
+  <p>Скрытый признак серебряной Кометы может проявиться у мальков, и тогда цвет начинает уходить туда, где его раньше не было. Так и начинается история из мультика ниже.</p>
+
+  <h3 style="margin-top:30px">Как у Кометы вырастает шапка</h3>
+  <p>У диких Комет лоб гладкий, шапку в озере не поймать. Однажды при нересте выпадает скачок, и у малька на лбу маленький бугорок, в паспорте «шапка 1 из 10». Эту рыбу бережёшь и скрещиваешь с хорошими Кометами, и бугорок передаётся примерно половине мальков. Дальше скрещиваешь рыб с бугорком между собой, срабатывает закрепление, и шапка растёт от поколения к поколению. В третьем поколении она 3 или 4 из 10, в пятом и шестом 7 или 8 из 10, пышная, как у породы «оранда». Это примерно 5 или 6 сессий.</p>
+
+  <h2 style="margin-top:40px">Как растёт малёк</h2>
+  <p>Малёк появляется сразу после нереста. Его геном задан при рождении, а рост постепенно его раскрывает. Сначала прозрачный малёк, потом цвет, пятна, плавники и, наконец, взрослая рыба. Каждая стадия примерно 30 минут, взрослой Комета становится часа через три. Малёк растёт, даже когда игра выключена. Вечером посадил пару, утром смотришь, что получилось. Паспорт открывается, только когда рыба выросла, поэтому до конца интересно, какой она станет.</p>
+  <div class="fig" style="padding:0;overflow:hidden"><img src="img/malek_7_stadiy.jpg" alt="Семь стадий роста малька Кометы" style="width:100%;display:block"></div>
+</section>
+
+<!-- 9. Мультик -->
+<section class="slide">
+  <p class="kicker">Пошёл процесс скрещивания</p>
+  <h2>30 поколений за 30 секунд</h2>
+  <p>Здесь 30 поколений Кометы сжаты в 30 секунд. Узор растёт сам, как у живых рыб. Пятна делятся, расползаются и срастаются в лабиринт, а цвет плавно течёт от хвоста к голове. Меняется и цвет самой рыбы, от серебряной через розовую, кремовую и мятную до светло-голубой. Справа видно, какие гены меняются.</p>
+  <video src="img/evolyuciya_komety_v3_30s.mp4" autoplay muted loop playsinline controls></video>
+  <p style="font-size:15px;color:var(--muted)">Если видео не играет, откройте <a href="img/evolyuciya_komety_v3_30s.gif">гифку</a>.</p>
+</section>
+
+<!-- 10, 11. Паспорт -->
+<section class="slide" id="passport">
+  <p class="kicker">Паспорт рыбы</p>
+  <h2>Паспорт</h2>
+  <div class="pass">
+    <div class="hd"><span>Паспорт рыбы · Homespace</span><span>№ KM-0030-7741</span></div>
+    <div class="bd">
+      <div class="ph"><img src="img/kometa_final.png" alt="Голубая Комета, поколение 30"></div>
+      <div class="dt">
+        <p class="nm">Лазурь</p>
+        <p class="sp">Комета · поколение 30 · выведена 26.10.2026</p>
+        <div class="kv">
+          <div><b>Длина</b>52 см</div><div><b>Вес</b>1,4 кг</div>
+          <div><b>Цвет</b>светло-голубое тело, синий узор, в природе у Комет нет</div><div><b>Узор</b>лабиринт</div>
+          <div><b>Родители</b>Ясная × Перламутр</div><div><b>Владелец</b>Артём</div>
+        </div>
+        <div class="gn"><div class="gr"><span>Полосы</span><div class="bar"><i style="width:100%"></i></div><b>10</b></div><div class="gr"><span>Длина хвоста</span><div class="bar"><i style="width:65%"></i></div><b>6,5</b></div><div class="gr"><span>Ширина хвоста</span><div class="bar"><i style="width:70%"></i></div><b>7</b></div><div class="gr"><span>Спинной плавник</span><div class="bar"><i style="width:85%"></i></div><b>8,5</b></div><div class="gr"><span>Грудные плавники</span><div class="bar"><i style="width:75%"></i></div><b>7,5</b></div><div class="gr"><span>Жаберные крышки</span><div class="bar"><i style="width:60%"></i></div><b>6</b></div><div class="gr"><span>Шапка на лбу</span><div class="bar"><i style="width:70%"></i></div><b>7</b></div><div class="gr"><span>Насыщенность цвета</span><div class="bar"><i style="width:80%"></i></div><b>8</b></div><div class="gr"><span>Блеск чешуи</span><div class="bar"><i style="width:60%"></i></div><b>6</b></div><div class="gr"><span>Темперамент</span><div class="bar"><i style="width:40%"></i></div><b>4</b></div><div class="gr"><span>Любопытство</span><div class="bar"><i style="width:80%"></i></div><b>8</b></div><div class="gr"><span>Скрытый признак</span><div style="font-family:Montserrat,sans-serif;font-weight:700">?</div><b></b></div></div>
+      </div>
+    </div>
+    <div class="ft">
+      <div class="rar"><small>Редкость</small><span>1 на 2 400 000</span></div>
+      <p class="fact">Голубая Комета с лабиринтом и шапкой на лбу. Такое сочетание выпадает примерно один раз на 2,4 миллиона мальков. Одна из самых редких Комет в мире.</p>
+    </div>
+  </div>
+  <h3>Что даёт паспорт</h3>
+  <p>Рыбе игрок сам даёт имя. Когда сидишь и думаешь, как её назвать, сильнее к ней привязываешься.</p>
+  <p>В аквариуме узор нарисован попроще, чтобы игра не тормозила. В паспорте та же рыба показана портретом в высокой чёткости, в студийном свете, её можно покрутить.</p>
+  <p>Число редкости честное. Каждый скачок, который случился с рыбой за её родословную, имеет свой шанс, и их произведение даёт «1 на N». Подкрутить его нельзя, поэтому коллекционеры за ним и гоняются.</p>
+  <p>Паспорт появляется, когда рыба выросла. В нём все её гены словами, сильные и слабые стороны, родословная и редкость.</p>
+  <p>Паспорт доказывает, что рыба твоя. Его можно поставить на полку, чтобы каждый, кто зайдёт в твой Homespace, видел, какую редкую рыбу ты вывел.</p>
+  <p>В будущем паспорт можно будет продать на торговой площадке. Вместе с паспортом продаётся и сама рыба, она переезжает в аквариум другого игрока.</p>
+</section>
+
+
+<!-- 12. Первая версия и что отложено -->
+<section class="slide">
+  <p class="kicker">План</p>
+  <h2>Первая версия</h2>
+  <p>Начинаем с одной Кометы. В первую версию входит вот что.</p>
+  <ol>
+    <li>Озеро с зонами, рыбы по-разному борются.</li>
+    <li>Улов разной редкости.</li>
+    <li>Ведро и большой аквариум.</li>
+    <li>Маленький аквариум для разведения, пара, малёк.</li>
+    <li>Рост малька с окрасом от родителей.</li>
+    <li>Мутация, которую видно.</li>
+  </ol>
+  <h2 style="margin-top:34px">Что отложено</h2>
+  <ul>
+    <li>Сонар и подсказки на воде.</li>
+    <li>Своя фауна для каждой карты (на старте все виды везде, по зонам).</li>
+    <li>Скрещивание разных видов (на старте только внутри вида).</li>
+    <li>Свет и тень как условия для рыбы.</li>
+    <li>Смерть рыбы.</li>
+    <li>Продажа и обмен. В первой версии нет мультиплеера, торговая площадка появится позже.</li>
+  </ul>
+</section>
+
+<!-- 13. Приложение: как сделано -->
+<section class="slide">
+  <p class="kicker">Приложение для команды</p>
+  <h2>Как это сделано</h2>
+  <ul>
+    <li>Окрас и узор рисует один общий материал на всех рыб, по числам генома. Заранее нарисованных вариантов нет.</li>
+    <li>Размеры частей (хвост, плавники, рост) меняются масштабом костей рига.</li>
+    <li>Характерные формы (шапка, телескопы, горб, жабры) делаются морфами. В Blender один раз лепится максимальная версия, а ген плавно смешивает её от нуля до максимума.</li>
+    <li>Узор запекается в маленькую текстуру один раз при рождении, поэтому рыба стоит столько же, сколько рыба с обычной текстурой.</li>
+    <li>Начинаем с Кометы. Нужно облегчить модель, слепить от 12 до 14 морфов, два запасных хвоста и карту зон окраса. Потом проверяем 12 рыб в аквариуме на слабом ноутбуке и в VR.</li>
+    <li>Модели, морфы и карты зон делаем в Blender. Материал окраса, код генома и паспорт в Unreal.</li>
+  </ul>
+</section>
+</body>
+</html>
